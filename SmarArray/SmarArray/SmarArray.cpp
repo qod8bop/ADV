@@ -5,18 +5,18 @@ class smartarr
 private:
 	int* arr;
 	int pos;
-	int am;
+	int amount;
 public:
 	smartarr(int n)
 	{
 		arr = new int[n];
 		pos = 0;
-		am = n;
+		amount = n;
 	}
 
 	void add_element(int el)
 	{
-		if(pos >= am)
+		if(pos >= amount)
 		{
 			throw std::runtime_error("Выход за пределы массива");
 		}

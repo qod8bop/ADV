@@ -4,34 +4,43 @@ class smartarr
 {
 private:
 	
-	int pos;
-	int am;
-public:
+	int pos = 0;
+	int amount = 0;
+	int filled = 0;
 	int* arr;
 
+public:
+
+	
 	smartarr(int n)
 	{
 		arr = new int[n];
 		pos = 0;
-		am = n;
+		amount = n;
+		
 	}
 
 
 
 	smartarr(const smartarr &array )
 	{
+		
+		amount = array.amount;
+		filled = array.filled;
 
+		arr = new int[amount];
 
-		arr = array.arr;
-		pos = array.pos;
-		am = array.am;
+		for (int i=0; i<filled; i++)
+		{
+			arr[i] = array.arr[i];
+		}
 	}
 
 
 
 	void add_element(int el)
 	{
-		if (pos >= am)
+		if (pos >= amount)
 		{
 			throw std::runtime_error("Выход за пределы массива");
 		}
@@ -40,6 +49,7 @@ public:
 		{
 			arr[pos] = el;
 			pos++;
+			filled++;
 		}
 	}
 
@@ -51,6 +61,9 @@ public:
 		}
 		else { return arr[n]; }
 	}
+
+
+
 
 	~smartarr()
 	{
@@ -68,12 +81,13 @@ int main()
 	arr.add_element(1);
 	arr.add_element(4);
 	arr.add_element(155);
-	std::cout << arr.arr;
+
 
 	smartarr new_array(2);
+	
 	new_array.add_element(44);
 	new_array.add_element(34);
-	std::cout << "\n" << new_array.arr;
+
 
 	arr = new_array;
 
