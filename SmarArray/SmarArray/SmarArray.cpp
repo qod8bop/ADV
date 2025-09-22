@@ -18,7 +18,7 @@ public:
 	{
 		if(pos >= amount)
 		{
-			throw std::runtime_error("Выход за пределы массива");
+			throw std::runtime_error("Выход за прелы массива");
 		}
 
 		else 

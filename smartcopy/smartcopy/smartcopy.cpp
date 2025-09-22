@@ -76,7 +76,8 @@ public:
 
 int main() 
 {
-
+	try
+	{
 	smartarr arr(5);
 	arr.add_element(1);
 	arr.add_element(4);
@@ -90,7 +91,11 @@ int main()
 
 
 	arr = new_array;
+	}
 
+	catch (const std::exception& ex) {
+		std::cout << ex.what() << std::endl;
+	}
 
 
 
