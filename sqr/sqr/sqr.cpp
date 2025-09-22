@@ -7,8 +7,8 @@ T sqr(T num)
 	return num * num;
 }
 
-template<>
-std::vector<int> sqr(std::vector<int> n)
+template<typename T>
+std::vector<T> sqr(std::vector<T> n)
 {
 	std::cout << "[IN] ";
 	for(int i=0; i<size(n); i++)

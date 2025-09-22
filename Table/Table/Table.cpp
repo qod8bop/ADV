@@ -13,6 +13,11 @@ public:
 		return tablo[index];
 	}
 
+	T* operator[](int index) const
+	{
+		return tablo[index];
+	}
+
 	table(int rows, int cols)
 	{
 		this->cols = cols;
