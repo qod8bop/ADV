@@ -20,7 +20,21 @@ public:
 		
 	}
 
+	smartarr& operator = (const smartarr& array)
+	{
 
+		amount = array.amount;
+		filled = array.filled;
+
+		arr = new int[amount];
+
+		for (int i = 0; i < filled; i++)
+		{
+			arr[i] = array.arr[i];
+		}
+
+		return *this;
+	}
 
 	smartarr(const smartarr &array )
 	{
