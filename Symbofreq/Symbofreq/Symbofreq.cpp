@@ -14,7 +14,7 @@ int main()
 	for(int i=0; i++; i<size)
 	{
 
-		std::cout << line[i] << std::endl; // Я понятия не имею, почему эта строчка просто игнорируется
+		std::cout << line[i] << std::endl; // Я понятия не имею, почему эта строка просто игнорируется
 		map[line[i]] = 1;
 
 		for(int j=0; j ++; j<size)
