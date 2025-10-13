@@ -8,24 +8,23 @@ int main()
 	std::string line = "Hello World!!";	
 	int size = line.length();
 
-	std::map<char, int> map;
+	std::map<char, int> map; 
 
-
-	for(int i=0; i++; i<size)
+	for(int i=0; i<size; i++)
 	{
 
-		std::cout << line[i] << std::endl; // Я понятия не имею, почему эта строка просто игнорируется
+		std::cout << line[i] << " - ";
 		map[line[i]] = 1;
 
-		for(int j=0; j ++; j<size)
+		for(int j=0; j<size; j++)
 		{
-			if (line[j] == line[i]) { map[line[i]]++; }
+			if (line[j] == line[i] && j !=i) { map[line[i]] += 1; }
 		}
 
-		std::cout << map[line[i]];
+		std::cout << map[line[i]] << std::endl;
 	}
 	
-
+	//Реализацию получше придумать не могу
 
 	return 0;
 }

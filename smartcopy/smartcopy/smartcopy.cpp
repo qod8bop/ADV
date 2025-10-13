@@ -22,6 +22,7 @@ public:
 
 	smartarr& operator = (const smartarr& array)
 	{
+		delete arr;
 
 		amount = array.amount;
 		filled = array.filled;
