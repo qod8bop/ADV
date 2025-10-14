@@ -7,7 +7,7 @@
 template<typename C>
 void  print_container (C cont)
 {
-	std::C <std::string>::iterator i = cont.begin(); 
+	C::iterator i = cont.begin(); 
 	while (i != cont.end()) 
 	{
 		std::cout << *i << std::endl; 
